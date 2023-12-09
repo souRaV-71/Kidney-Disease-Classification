@@ -1,8 +1,10 @@
+# this file is to create folder structure 
+
 import os
 from pathlib import Path
 import logging
 
-#logging string
+#logging string - printing the messages on console
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 project_name = 'cnnClassifier'
@@ -28,7 +30,7 @@ list_of_files = [
 
 ]
 
-
+# convert paths to specific os 
 for filepath in list_of_files:
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
